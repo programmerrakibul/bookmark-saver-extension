@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Bookmark Saver",
+  "version": "1.0",
+  "description": "A simple extension that save your Bookmarks",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "bookmark.png"
+  },
+  "permissions": ["storage", "tabs"],
+  "host_permissions": ["https://*/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "js": ["./js/app.js"]
+    }
+  ]
+}
