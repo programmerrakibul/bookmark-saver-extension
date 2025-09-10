@@ -1,7 +1,7 @@
 const bookmarkBtn = document.getElementById("bookmark-btn");
-const cardContainer = document.getElementById("bookmark-container");
 
 function makeBookmarkCard() {
+  const cardContainer = document.getElementById("bookmark-container");
   cardContainer.innerHTML = "";
   const items = JSON.parse(localStorage.getItem("bookmarkItems")) || [];
 
@@ -51,8 +51,7 @@ function addBookmark(e) {
   nameEl.value = "";
   urlEl.value = "";
 }
+
 window.onload = makeBookmarkCard;
-// const items = JSON.parse(localStorage.getItem("bookmarkItems")) || [];
-// console.log(items);
 
 bookmarkBtn.addEventListener("click", addBookmark);
